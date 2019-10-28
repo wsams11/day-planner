@@ -27,7 +27,7 @@
 
         <div class="col text-center">
 
-            <div class="row" id="hour-8" data-hour="8">
+            <div class="row hour" id="hour-8" data-hour="8">
 
                 <div class="col-2">
                     <h3>8AM</h3>
@@ -36,7 +36,7 @@
                 <button class="col-2 button"> save button </button>
 
             </div>
-            <div class="row" id="hour-9" data-hour="9">
+            <div class="row hour" id="hour-9" data-hour="9">
 
                 <div class="col-2">
                     <h3> 9AM </h3>
@@ -45,7 +45,7 @@
                 <button class="col-2 button"> save button </button>
 
             </div>
-            <div class="row" id="hour-10" data-hour="10">
+            <div class="row hour" id="hour-10" data-hour="10">
 
                 <div class="col-2">
                     <h3> 10AM </h3>
@@ -54,7 +54,7 @@
                 <button class="col-2 button"> save button </button>
 
             </div>
-            <div class="row" id="hour-11" data-hour="11">
+            <div class="row hour" id="hour-11" data-hour="11">
 
                 <div class="col-2">
                     <h3> 11AM </h3>
@@ -63,7 +63,7 @@
                 <button class="col-2 button"> save button </button>
 
             </div>
-            <div class="row" id="hour-12" data-hour="12">
+            <div class="row hour" id="hour-12" data-hour="12">
 
                 <div class="col-2">
                     <h3> NOON </h3>
@@ -72,7 +72,7 @@
                 <button class="col-2 button"> save button </button>
 
             </div>
-            <div class="row" id="hour-1" data-hour="13">
+            <div class="row hour" id="hour-1" data-hour="13">
 
                 <div class="col-2">
                     <h3> 1PM </h3>
@@ -81,7 +81,7 @@
                 <button class="col-2 button"> save button </button>
 
             </div>
-            <div class="row" id="hour-2" data-hour="14">
+            <div class="row hour" id="hour-2" data-hour="14">
 
                 <div class="col-2">
                     <h3> 2PM </h3>
@@ -90,7 +90,7 @@
                 <button class="col-2 button"> save button </button>
 
             </div>
-            <div class="row" id="hour-3" data-hour="15">
+            <div class="row hour" id="hour-3" data-hour="15">
 
                 <div class="col-2">
                     <h3> 3PM </h3>
@@ -99,7 +99,7 @@
                 <button class="col-2 button"> save button </button>
 
             </div>
-            <div class="row" id="hour-4" data-hour="16">
+            <div class="row hour" id="hour-4" data-hour="16">
 
                 <div class="col-2">
                     <h3> 4PM </h3>
@@ -108,7 +108,7 @@
                 <button class="col-2 button"> save button </button>
 
             </div>
-            <div class="row" id="hour-5" data-hour="17">
+            <div class="row hour" id="hour-5" data-hour="17">
 
                 <div class="col-2">
                     <h3> 5PM </h3>
@@ -139,9 +139,21 @@
         // write conditional function to display grey for past hours, yellow for current hour and green for upcoming hours
         // define variables for current time using moment
         let currentTime = moment().hour();
-        if (currentTime === currentTime){
-            $("#hour-3").css("background-color", "yellow");
-        }
+        // if (currentTime === currentTime){
+        //     $("#hour-3").css("background-color", "yellow");
+        // }
+        $(".hour").each(function(){
+            // let hour= this.dataset.hour;
+            // console.log(this.dataset);
+            let hour = parseInt($(this).attr("data-hour"));
+            if(currentTime < hour){
+                $(this).addClass("bg-black")
+            }else if (hour === currentTime){
+                $(this).addClass("bg-green");
+            }else{
+                $(this).addClass("bg-red");
+            }
+        })
         
         // console.log(moment().hour());
         // let m = moment();
