@@ -18,7 +18,7 @@
         <div class="jumbotron">
             <h1 class="text-center">WorkDay Scheduler</h1>
             <h3 class="text-center">A simple calendar app for scheduling your day </h3>
-            <h3 class="text-center">Date</h3>
+            <h3 class="text-center currentDate"></h3>
         </div>
 
     </div>
@@ -27,111 +27,129 @@
 
         <div class="col text-center">
 
-            <div class="row hour-8">
+            <div class="row" id="hour-8" data-hour="8">
 
                 <div class="col-2">
-                    <h3> 8AM </h3>
+                    <h3>8AM</h3>
                 </div>
-                <textarea class="col-8 8" id="8"></textarea>
+                <textarea class="col-8 textContent"></textarea>
                 <button class="col-2 button"> save button </button>
 
             </div>
-            <div class="row hour-9">
+            <div class="row" id="hour-9" data-hour="9">
 
                 <div class="col-2">
                     <h3> 9AM </h3>
                 </div>
-                <textarea class="col-8"></textarea>
+                <textarea class="col-8 textContent"></textarea>
                 <button class="col-2 button"> save button </button>
 
             </div>
-            <div class="row hour-10">
+            <div class="row" id="hour-10" data-hour="10">
 
                 <div class="col-2">
                     <h3> 10AM </h3>
                 </div>
-                <textarea class="col-8"></textarea>
+                <textarea class="col-8 textContent"></textarea>
                 <button class="col-2 button"> save button </button>
 
             </div>
-            <div class="row hour-11">
+            <div class="row" id="hour-11" data-hour="11">
 
                 <div class="col-2">
                     <h3> 11AM </h3>
                 </div>
-                <textarea class="col-8"></textarea>
+                <textarea class="col-8 textContent"></textarea>
                 <button class="col-2 button"> save button </button>
 
             </div>
-            <div class="row hour-12">
+            <div class="row" id="hour-12" data-hour="12">
 
                 <div class="col-2">
                     <h3> NOON </h3>
                 </div>
-                <textarea class="col-8"></textarea>
+                <textarea class="col-8 textContent"></textarea>
                 <button class="col-2 button"> save button </button>
 
             </div>
-            <div class="row hour-1">
+            <div class="row" id="hour-1" data-hour="13">
 
                 <div class="col-2">
                     <h3> 1PM </h3>
                 </div>
-                <textarea class="col-8"></textarea>
+                <textarea class="col-8 textContent"></textarea>
                 <button class="col-2 button"> save button </button>
 
             </div>
-            <div class="row hour-2">
+            <div class="row" id="hour-2" data-hour="14">
 
                 <div class="col-2">
                     <h3> 2PM </h3>
                 </div>
-                <textarea class="col-8"></textarea>
+                <textarea class="col-8 textContent"></textarea>
                 <button class="col-2 button"> save button </button>
 
             </div>
-            <div class="row hour-3">
+            <div class="row" id="hour-3" data-hour="15">
 
                 <div class="col-2">
                     <h3> 3PM </h3>
                 </div>
-                <textarea class="col-8"></textarea>
+                <textarea class="col-8 textContent hour3"></textarea>
                 <button class="col-2 button"> save button </button>
 
             </div>
-            <div class="row hour-4">
+            <div class="row" id="hour-4" data-hour="16">
 
                 <div class="col-2">
                     <h3> 4PM </h3>
                 </div>
-                <textarea class="col-8" id="8"></textarea>
+                <textarea class="col-8 textContent"></textarea>
                 <button class="col-2 button"> save button </button>
 
             </div>
-            <div class="row hour-5">
+            <div class="row" id="hour-5" data-hour="17">
 
                 <div class="col-2">
                     <h3> 5PM </h3>
                 </div>
-                <textarea class="col-8"></textarea>
+                <textarea class="col-8 textContent"></textarea>
                 <button class="col-2 button"> save button </button>
 
             </div>
 
-
-
-
         </div>
-        <script src="assets/app.js"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
     </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+        <script src="assets/app.js"></script>
+        <script src="assets/moment/moment.min.js"></script>
+    <script>
+        $(".currentDate").text(moment().format("dddd, MMMM Do"))
+        // write conditional function to display grey for past hours, yellow for current hour and green for upcoming hours
+        // define variables for current time using moment
+        let currentTime = moment().hour();
+        if (currentTime === currentTime){
+            $("#hour-3").css("background-color", "yellow");
+        }
+        
+        // console.log(moment().hour());
+        // let m = moment();
+       
+        // m = moment( "26/10/2019 3:00PM", "DD/MM/YYYY h:mmA");
+        
+        </script>
+        
 
-
-
-
-
-
-
+</body>
 </html>

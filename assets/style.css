@@ -11,6 +11,8 @@ body{
     background-image: url("images/water.jpg");
 }
 
-    .button{
+.button{
     background-color: aqua;}
-    
+.calendar{
+    margin: 20px;
+}
