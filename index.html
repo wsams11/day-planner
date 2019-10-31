@@ -136,15 +136,9 @@
         <script src="assets/moment/moment.min.js"></script>
     <script>
         $(".currentDate").text(moment().format("dddd, MMMM Do"))
-        // write conditional function to display grey for past hours, yellow for current hour and green for upcoming hours
-        // define variables for current time using moment
         let currentTime = moment().hour();
-        // if (currentTime === currentTime){
-        //     $("#hour-3").css("background-color", "yellow");
-        // }
+    
         $(".hour").each(function(){
-            // let hour= this.dataset.hour;
-            // console.log(this.dataset);
             let hour = parseInt($(this).attr("data-hour"));
             if(currentTime < hour){
                 $(this).addClass("bg-black")
@@ -154,11 +148,6 @@
                 $(this).addClass("bg-red");
             }
         })
-        
-        // console.log(moment().hour());
-        // let m = moment();
-       
-        // m = moment( "26/10/2019 3:00PM", "DD/MM/YYYY h:mmA");
         
         </script>
         
