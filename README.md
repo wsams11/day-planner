@@ -30,6 +30,6 @@ I have created an app that can be used as a daily work planner. This app will al
 
 ## Usage
 
-- [Tempe Weather](assets/images/1)
-- [Flint Weather](assets/images/2)
+- [Day Planner](assets/images/1)
+
 
